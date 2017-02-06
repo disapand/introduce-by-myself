@@ -4,7 +4,8 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
-    "fullpage.js": "fullpage#^2.9.2"
+    "fullpage.js": "fullpage#^2.9.2",
+    "animate.css": "^3.5.2"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -19,7 +20,7 @@
         "dist/jquery.fullpage.js",
         "dist/jquery.fullpage.css"
       ]
-     }
+    }
   },
   "devDependencies": {
     "chai": "^3.5.0",

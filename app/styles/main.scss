@@ -3,7 +3,104 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-.full-screen-img {
-  width: 100%;
-  height: auto;
+@mixin full-screen ( $position: relative ) {
+	@if $position == 'absolute' {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	} @else {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@mixin page( $index: 1 ) {
+	background-image: url('../images/page' + $index + '-bgi.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+@mixin font-type( $font-name: "Microsoft YaHei", $size: 18px ) {
+	@if $font-name == 'zh' {
+		font-family: "Microsoft YaHei";
+		font-size: $size;
+	}@else {
+		font-family: 'Consolas';
+		font-size: $size;
+	}
+
+}
+.en {
+	@include font-type('en');
+}
+
+.zh {
+	@include font-type('zh');
+}
+
+//页面背景图片设置
+#page1 {
+	@include page(1);
+}
+
+#page2 {
+	@include page(2);
+}
+
+#page3 {
+	@include page(3);
+}
+
+#page4 {
+	@include page(4);
+}
+
+#page5 {
+	@include page(5);
+}
+
+//页面样式
+
+.intro {
+	margin-top: 50px;
+}
+
+.intro-bg {
+	background-color: #999;
+	opacity: .7;
+	border-radius: 10px;
+	padding: 15px;
+}
+
+.intro-item {
+	padding: 10px;
+	margin: 0 10px;
+	border-bottom: 1px solid #666;
+	opacity: 0;
+
+	.icon {
+		padding-left: 10px;
+	}
+
+	.content{
+		display: block;
+		padding-top: 5px;
+		color: #000;
+	}
+
+	a:hover, a:focus {
+		text-decoration: none;
+	}
+}
+
+.intro-item-first {
+	padding-top: 0;
+}
+
+.intro-item-last {
+	border-bottom: none;
+	padding-bottom: 0;
 }
