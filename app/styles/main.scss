@@ -23,25 +23,16 @@ $icon-font-path: '../fonts/';
 
 }
 
-@mixin font-type( $font-name: "Microsoft YaHei", $size: 18px ) {
-	@if $font-name == 'zh' {
-		font-family: "Microsoft YaHei";
-		font-size: $size;
-	}@else {
-		font-family: 'Consolas';
-		font-size: $size;
-	}
-
-}
 .en {
-	@include font-type('en');
-}
-
-.zh {
-	@include font-type('zh');
+	font-family: 'Consolas';
 }
 
 //页面背景图片设置
+body {
+	font-family: 'Microsoft Yahei';
+	font-size: 18px;
+}
+
 #page1 {
 	@include page(1);
 }
@@ -60,6 +51,14 @@ $icon-font-path: '../fonts/';
 
 #page5 {
 	@include page(5);
+}
+
+.fp-controlArrow.fp-prev {
+	left: 4%;
+}
+
+.fp-controlArrow.fp-next {
+	right: 4%;
 }
 
 //页面样式
@@ -103,4 +102,57 @@ $icon-font-path: '../fonts/';
 .intro-item-last {
 	border-bottom: none;
 	padding-bottom: 0;
+}
+
+.inline {
+	display: inline-block;
+}
+
+span {
+	em {
+		color: #999;
+		padding-left: 10px;
+	}
+}
+
+.colorful-hr {
+	margin-top: 0;
+	border-top: .5px solid #337ab7;
+}
+
+#intro-group1 {
+
+}
+
+.item-link {
+	position: absolute;
+	top: 0;
+}
+
+.item-hover {
+	margin-bottom: 20px;
+}
+
+#intro-group2 {
+	position: absolute;
+	top: 20%;
+	left: 100%;
+}
+
+li {
+	line-height: 2em;
+}
+
+#home, #profile, #messages, #taobao {
+	margin-top: 5%;
+}
+
+#preview {
+	width: 100%;
+	font-size: 1.5em;
+}
+
+#shop {
+	width: 100%;
+	font-size: 1.5em;
 }
