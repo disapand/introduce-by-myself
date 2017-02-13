@@ -70,7 +70,7 @@ $(document).ready(function () {
     });
 
     $('#shop').click(function (event) {
-        window.open("https://shop117316021.taobao.com/", "_blank");
+        window.open('https://shop117316021.taobao.com/', '_blank');
     });
 });
 //# sourceMappingURL=main.js.map
